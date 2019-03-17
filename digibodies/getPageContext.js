@@ -1,11 +1,15 @@
 import { SheetsRegistry } from 'jss';
+import { createMuiTheme } from '@material-ui/core/styles';
 import { createGenerateClassName } from '@material-ui/styles';
 import userTheme from '../src/theming';
-import { createMuiTheme } from '@material-ui/core/styles';
+
+// A theme with custom primary and secondary color.
+// It's optional.
+const theme = createMuiTheme(userTheme.themeDefinition);
 
 function createPageContext() {
   return {
-    theme: createMuiTheme(userTheme.themeDefinition),
+    theme,
     // This is needed in order to deduplicate the injection of CSS in the page.
     sheetsManager: new Map(),
     // This is needed in order to inject the critical CSS.

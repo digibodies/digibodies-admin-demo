@@ -1,12 +1,14 @@
 import '../digibodies/bootstrap';
 
+// --- Post bootstrap -----
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 import { StylesProvider, ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import userTheme from '../src/theming';
 import getPageContext from '../digibodies/getPageContext';
+
+import userTheme from '../src/theming';
 
 class DigibodiesApp extends App {
   constructor() {
@@ -17,7 +19,7 @@ class DigibodiesApp extends App {
   componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles) {
+    if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
   }
@@ -27,7 +29,7 @@ class DigibodiesApp extends App {
     return (
       <Container>
         <Head>
-          <title>My page</title>
+          <title>Digibodies</title>
         </Head>
         {/* Wrap every page in Styles and Theme providers */}
         <StylesProvider
@@ -41,6 +43,7 @@ class DigibodiesApp extends App {
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
             <userTheme.GlobalStyles />
+
             {/* Pass pageContext to the _document though the renderPage enhancer
                 to render collected styles on server-side. */}
             <Component pageContext={this.pageContext} {...pageProps} />

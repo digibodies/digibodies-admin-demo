@@ -1,3 +1,4 @@
+// Global Styles for your Application
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => {
@@ -5,17 +6,14 @@ const useStyles = makeStyles(theme => {
     '@global': {
       html: {
         'font-family': 'sans-serif',
-        '-webkit-font-smoothing': 'unset',
-        '-moz-osx-font-smoothing': 'unset',
-        'font-size': '16px',
-        padding: theme.spacing.unit * 2
+        'font-size': '16px'
       },
+      // Default Anchors
       a: {
         color: theme.palette.primary.main,
         textDecoration: 'none',
-        '&:hover': {
-          textDecoration: 'underline'
-        }
+        '&:hover': { textDecoration: 'underline' },
+        fontWeight: 400
       }
     }
   };

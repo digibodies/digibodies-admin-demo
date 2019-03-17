@@ -1,19 +1,17 @@
-// Defines theme to use with jss and material-ui components
+// Define Your Material-UI theme here - https://material-ui.com/customization/themes/
 
-import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
 const muiTheme = {
   typography: {
     useNextVariants: true
-    //fontFamily: '"Titillium Web", sans-serif',
   },
   palette: {
     type: 'dark',
     primary: {
-      light: purple[300],
-      main: purple[500],
-      dark: purple[700]
+      light: '#e1f3fc',
+      main: '#039be5',
+      dark: '#7bb8ff'
     },
     secondary: {
       light: green[300],
