@@ -83,8 +83,6 @@ DigibodiesDocument.getInitialProps = ctx => {
   // It might be undefined, e.g. after an error.
   if (pageContext) {
     css = pageContext.sheetsRegistry.toString();
-    console.log(css);
-
     if (!css || css === '') {
       css =
         'body:after { width: 100%; padding: 16px; position: absolute; border: 1px solid red; bottom: 0; left: 0; content: "SheetsRegistry.toString() returned empty string."}';

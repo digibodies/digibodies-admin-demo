@@ -1,4 +1,4 @@
-import '../src/theming/mui_bootstrap';
+import '../digibodies/bootstrap';
 
 import React from 'react';
 import App, { Container } from 'next/app';
@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { StylesProvider, ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import userTheme from '../src/theming';
-import getPageContext from '../src/theming/getPageContext';
+import getPageContext from '../digibodies/getPageContext';
 
 class DigibodiesApp extends App {
   constructor() {
